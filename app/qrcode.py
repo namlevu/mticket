@@ -59,4 +59,4 @@ def make_qrcode_url(url):
     signer = get_qrcode_signer()
     signature = signer.get_signature(url)
     url = urlsafe_b64encode(url.strip().encode('utf-8'))
-    return url_for('jqrcode.qrcode_image', url=url, signature=signature)
+    return url_for('qrcode.qrcode_image', url=url, signature=signature)
