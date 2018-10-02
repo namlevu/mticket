@@ -11,7 +11,7 @@ def index():
   qrcode_url = make_qrcode_url('http://www.namvl.com')
   if request.method == 'POST':
     qrcode_url = make_qrcode_url('http://www.msn.com')
-  if request.method = 'GET':
+  if request.method == 'GET':
     qrcode_url = make_qrcode_url('http://www.google.com')
   return render_template('index.html', title="Home", qrcode_url=qrcode_url)
 
