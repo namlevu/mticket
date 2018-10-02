@@ -17,9 +17,12 @@ def index():
     ticket_quanlity = request.form['quanlity']
     bought_at = '2018/10/10'
     amount = request.form['amount']
+    # TODO: save form data to database
     key = email + '&' + tel + '&' + ticket_quanlity + '&' + bought_at + '&' + amount
     url = base_url + key
     qrcode_url = make_qrcode_url(url)
+    # TODO: save encoded information to database
+    
     return render_template('index.html', title="Home", qrcode_url=qrcode_url)
 
   if request.method == 'GET':
