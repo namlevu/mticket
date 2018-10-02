@@ -6,7 +6,16 @@
   {% if qrcode_url %}
     <img src="{{ qrcode_url }}" width="300" height="300" />
   {% else %}
-    <h3>qrcode_url not exist</h3>
+  <form action="/" method="POST">
+      <p>Email: <input type="email" name="email" placeholder="Email" /></p>
+      <p>Tel: <input type="tel" name="tel" placeholder="Mobile phone number" /></p>
+      <p>Ticket number: <input type="number" name="quanlity"/></p>
+      <p>Email: <input type="text" name="amount" placeholder="Amount" /></p>
+      <p>
+        <input type="submit" value="Submit" />
+      </p>
+  </form>
+    
   {% endif %}
   
 </body>
