@@ -3,6 +3,11 @@
   <title>{{ title }} - Microblog</title>
 </head>
 <body>
-  <img src="{{ qrcode_url }}" width="300" height="300" />
+  {% if qrcode_url %}
+    <img src="{{ qrcode_url }}" width="300" height="300" />
+  {% else %}
+    <h3>qrcode_url not exist</h3>
+  {% endif %}
+  
 </body>
 </html>

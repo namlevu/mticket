@@ -1,13 +1,12 @@
-from __future__ import print_function, absolute_import, unicode_literals
+from __future__ import absolute_import, print_function, unicode_literals
 
-from base64 import urlsafe_b64encode, urlsafe_b64decode
-from mimetypes import types_map
+from base64 import urlsafe_b64decode, urlsafe_b64encode
 from io import BytesIO
+from mimetypes import types_map
 
-from flask import Blueprint, current_app, send_file, url_for, jsonify
-from qrcode import QRCode
+from flask import Blueprint, current_app, jsonify, send_file, url_for
 from itsdangerous import Signer
-
+from qrcode import QRCode
 
 __all__ = ['make_qrcode_image']
 
